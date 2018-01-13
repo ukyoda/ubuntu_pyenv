@@ -15,7 +15,7 @@ RUN    cd /usr/local \
 ENV PYENV_ROOT /usr/local/pyenv
 ENV PATH ${PYENV_ROOT}/shims:${PYENV_ROOT}/bin:${PATH}
 
-# install latest anaconda3
+# install latest anaconda2
 RUN    pyversion=$(pyenv install -l | grep anaconda2 | tail -n 1) \
     && pyenv install ${pyversion} \
     && pyenv rehash \
