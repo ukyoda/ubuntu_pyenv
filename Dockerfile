@@ -3,7 +3,7 @@ FROM ubuntu:16.04
 # Dependency Components Install
 RUN    apt-get update \
     && apt-get -y install git gcc make openssl libssl-dev libbz2-dev libreadline-dev libsqlite3-dev \
-    && apt-get -y install aria2 curl \
+    && apt-get -y install aria2 curl bzip2 \
     && apt-get clean
 
 # Install Pyenv
