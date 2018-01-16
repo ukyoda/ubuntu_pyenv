@@ -16,11 +16,11 @@ ENV PYENV_ROOT /usr/local/pyenv
 ENV PATH ${PYENV_ROOT}/shims:${PYENV_ROOT}/bin:${PATH}
 
 # install latest anaconda3
-RUN    pyversion=$(pyenv install -l | grep anaconda3 | tail -n 1) \
-    && pyenv install anaconda3-5.0.1 \
-#    && pyenv install ${pyversion} \
+RUN    pyversion=anaconda3-5.0.1 \
+    && pyenv install ${pyversion} \
     && pyenv rehash \
     && pyenv global ${pyversion}
+
 
 # conda update
 RUN    conda update conda \
