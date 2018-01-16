@@ -17,7 +17,8 @@ ENV PATH ${PYENV_ROOT}/shims:${PYENV_ROOT}/bin:${PATH}
 
 # install latest anaconda2
 RUN    pyversion=$(pyenv install -l | grep anaconda2 | tail -n 1) \
-    && pyenv install ${pyversion} \
+#    && pyenv install ${pyversion} \
+    && pyenv install anaconda2-5.0.1 \
     && pyenv rehash \
     && pyenv global ${pyversion}
 
